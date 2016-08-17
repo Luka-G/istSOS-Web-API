@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISTSOS CORE TEST</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../lib/istsos-core.js"></script>
+
+    <script>
+        /** RESPONSE JSON STYLING  */
+        function log(obj, str) {
+            document.getElementById('title').innerHTML = str;
+            document.getElementById('json').innerHTML = test_json.prettyPrint(obj);
+        }
+
+        var test_json = {
+            replacer: function (match, pIndent, pKey, pVal, pEnd) {
+                var key = '<span class=json-key>';
+                var val = '<span class=json-value>';
+                var str = '<span class=json-string>';
+                var r = pIndent || '';
+                if (pKey)
+                    r = r + key + pKey.replace(/[": ]/g, '') + '</span>: ';
+                if (pVal)
+                    r = r + (pVal[0] == '"' ? str : val) + pVal + '</span>';
+                return r + (pEnd || '');
+            },
+            prettyPrint: function (obj) {
+                var jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/mg;
+                return JSON.stringify(obj, null, 3)
+                        .replace(/&/g, '&amp;').replace(/\\"/g, '&quot;')
+                        .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                        .replace(jsonLine, test_json.replacer);
+            }
+        };
+    </script>
+    <style>
+        pre {
+            background-color: ghostwhite;
+            border: 1px solid silver;
+            padding: 10px 20px;
+            margin: 20px;
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .json-key {
+            color: brown;
+        }
+
+        .json-value {
+            color: navy;
+        }
+
+        .json-string {
+            color: olive;
+        }
+
+        button {
+            border-radius: 10px;
+            height: 30px;
+        }
+
+        #first, #second {
+            padding: 10px;
+        }
+        a {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="jumbotron">
+    <h2>ISTSOS JAVASCRIPT CORE LIBRARY - TESTING PAGE</h2>
+    <h4>Below are listed all methods that use HTTP GET request to collect the demo data from IstSOS public server</h4>
+    <h5><i>Note: POST, PUT and DELETE HTTP requests are implemented through other methods of the istsos-core, but they are not introduced in this test, because they could make some changes to the data of the IstSOS public server and that is not the purpose of this test.</i></h5>
+    </div>
+    <div class="row">
+        <div id="first" class="col-md-3">
+            <ul class="list-group">
+                <li class="list-group-item" data-toggle="collapse" data-target="#server_content"><a>SERVER METHODS</a></li>
+                <ul id="server_content" class="collapse list-group">
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getServiceReq()">GET SERVICE</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getStatusReq()">GET STATUS</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getAbout()">GET ABOUT INFO</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getConf()">GET CONFIGURATION</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getDb()">GET DEFAULT DATABASE</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getList()">GET SERVICES</button></li>
+                </ul>
+                <li class="list-group-item" data-toggle="collapse" data-target="#conf_content"><a>CONFIGURATION METHODS</a></li>
+                <ul id="conf_content" class="collapse list-group">
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getConfigurationReq()">GET CONFIGURATION</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getProviderReq()">GET PROVIDER</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getIdentReq()">GET IDENTIFICATION</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getCoordSysReq()">GET COORDINATE SYSTEM</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="mqtt()">GET MQTT</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOC()">GET OBSERVATION CONFIG</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getProxyReq()">GET PROXY</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getEPSGS()">GET EPSG CODES</button></li>
+                </ul>
+                <li class="list-group-item" data-toggle="collapse" data-target="#database_content"><a>DATABASE METHODS</a></li>
+                <ul id="database_content" class="collapse list-group">
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getDatabase()">GET DATABASE</button></li>
+                </ul>
+                <li class="list-group-item" data-toggle="collapse" data-target="#service_content"><a>SERVICE METHODS</a></li>
+                <ul id="service_content" class="collapse list-group">
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOffNames()">GET OFFERING NAMES</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOffs()">GET OFFERINGS</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getProcs()">GET PROCEDURES</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getProc()">GET PROCEDURE</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getVProcs()">GET VIRTUAL PROCEDURES</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getVProc()">GET VIRTUAL PROCEDURE</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOPS()">GET OBSERVED PROPERTIES</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOP()">GET OBSERVED PROPERTY</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getDQs()">GET DATA QUALITIES</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getDQ()">GET DATA QUALITY</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getUOMs()">GET UNITS OF MEASURE</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getUOM()">GET UNIT OF MEASURE</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getServiceDatabase()">GET SERVICE DATABASE</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getSysTypes()">GET SYSTEM TYPES</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getGEOJSON()">GET FEATURE COLLECTION</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOBSERVATIONS()">GET OBSERVATIONS</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOBSERVATIONDATA_AGG()">GET OBSERVATIONS WITH AGGREGATION</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOBSERVATIONDATA()">GET OBSERVATIONS BY PROPERTY</button> </li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getOBSERVATIONS_QI()">GET OBSERVATIONS BY QUALITY</button> </li>
+                </ul>
+                <li class="list-group-item" data-toggle="collapse" data-target="#offering_content"><a>OFFERING METHODS</a></li>
+                <ul id="offering_content" class="collapse list-group">
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getMembers()">MEMBER PROCEDURES</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getNonMembers()">NON-MEMBER PROCEDURES</button></li>
+                </ul>
+                <li class="list-group-item" data-toggle="collapse" data-target="#virtual_procedure_content"><a>VIRTUAL PROCEDURE METHODS</a></li>
+                <ul id="virtual_procedure_content" class="collapse list-group">
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getRCurve()">GET RATING CURVE</button></li>
+                    <li class="list-group-item"><button class="btn btn-success" onclick="getCodeReq()">GET CODE</button></li>
+                </ul>
+            </ul>
+        </div>
+        <div id="second" class="col-md-9">
+            <h4 id="title" class="text-center"></h4>
+            <pre id="json"></pre>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="istsos-test.js"></script>
+
+</body>
+</html>

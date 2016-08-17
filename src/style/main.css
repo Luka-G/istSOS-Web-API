@@ -1,0 +1,69 @@
+html, body {
+	font-family: Ubuntu, sans-serif;
+	font-weight: bold;
+}
+
+.jumbotron { 
+	padding: 80px 0 80px 0;
+    background-color: #19b019; /* istSOS green */
+    color: #ffffff;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    margin-bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #19b019 !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #19b019  !important;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: #fff;
+    border-color: #19b019;
+    color: #fff !important;
+}
+
+/* IMAGES */
+.img-thumbnail {
+	display: inline-block;
+	margin: auto auto;
+}
+
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+/* ABOUT ISTSOS CORE */
+
+#core {
+	color: #005600;
+}
+
+.core-p {
+	line-height: 25px;
+	font-size: 12pt;
+	font-weight: normal;
+	font-style: italic;
+}
+

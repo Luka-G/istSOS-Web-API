@@ -4,14 +4,88 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 		<link rel="stylesheet" type="text/css" href="src/style/main.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="src/js/main.js"></script>
 		<title>IstSOS Web API</title>
 	</head>
-	<body>
-		<h1> IstSOS Web API </h1>
-		<h2> Lightweight framework for working with IstSOS data </h2>
-	</body>
-</html>
+	<body data-spy="scroll" data-target=".navbar" data-offset="60">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="src/img/istsos-logo.png" height="25px" width="107px" /></a>
+				</div>
+				<div class="collapse navbar-collapse" id="tools">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#core">JS CORE</a></li>
+						<li><a href="#creator">WIDGET TOOLS</a></li>
+						<li><a href="#status">STATUS</a></li>
+						<li><a href="#reports">REPORTS</a></li>
+						<li><a href="#links">LINKS</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="jumbotron text-center">
+			<h1>IstSOS Web API</h1>
+			<p>Lightweight Javascript framework for interacting with the sensor observation data managed by IstSOS server implementation</p>
+		</div>
+		<div id="core" class="container-fluid">
+			<div class="row">
+				<div class="col-sm-5">
+					<h2><strong>IstSOS Core JavaScript Library</strong></h2>
+					<h3>Exposes communication with the IstSOS WA REST interface</h4>
+					<p class="core-p">IstSOS core JavaScript library was developed using pure JavaScript and Google Closure library, which was particulary used for event handling customization and asynchronous HTTP requests management. IstSOS core JavaScript library covers most of the IstSOS WA REST HTTP requests, which means that developers can easily get the observation data from IstSOS and publish it to their own Web site/page. Using this library, developers can go even further into development and implement IstSOS admin functionalities, like service registering, sensor registering, creating new offerings, adding new units of measures etc...</p>
+					<br/>
+					<table class="table table-bordered">
+						<tr>
+							<td><p class="core-p">Usage instructions</p></td>
+							<td><a href="https://github.com/WebPractice-LukaG/javascript-core#usage-instructions" target="_blank"><strong>https://github.com/WebPractice-LukaG/javascript-core#usage-instructions</strong></td>
+						</tr>
+						<tr>
+							<td><p class="core-p">Commit list</p></td>
+							<td><a href="https://github.com/WebPractice-LukaG/javascript-core/commits/master" target="_blank">https://github.com/WebPractice-LukaG/javascript-core/commits/master</a></td>
+						</tr>
+						<tr>
+							<td><p class="core-p">API Reference</p></td>
+							<td><a href="https://github.com/WebPractice-LukaG/javascript-core/wiki/API-Reference" target="_blank">https://github.com/WebPractice-LukaG/javascript-core/wiki/API-Reference</a></td>
+						</tr>
+					</table>
+					<p class="core-p">Click on the button below to check out the library test page...</p>
+					<a href="pages/core-test/istsos-test.html" target="_blank" class="btn btn-default btn-lg"><b>JS Core Test</b></a>
+				</div>
+				<div class="col-sm-7 text-center">
+					<h2><strong>How it works</strong></h2>
+					<div class="container-fluid text-center bg-grey">
+						<div class="row text-center">
+							<div class="col-sm-4">
+								<div class="thumbnail  js-core">
+									<a href="src/img/class-diagram.png" target="_blank"><img class="img-thumbnail" src="src/img/class-diagram.png" alt="Class structure"></a>
+									<p><strong>Class Structure</strong></p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="thumbnail  js-core">
+									<a href="src/img/flow-chart.png" target="_blank"><img class="img-thumbnail" src="src/img/flow-chart.png" alt="Flow chart"></a>
+									<p><strong>Flow chart</strong></p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="thumbnail  js-cores">
+									<a href="src/img/example-response.png" target="_blank"><img class="img-thumbnail" src="src/img/example-response.png" alt="Example response"></a>
+									<p><strong>Example response</strong></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
