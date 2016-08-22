@@ -3,6 +3,10 @@ html, body {
 	font-weight: bold;
 }
 
+hr {
+    border: 1px solid #19b019;
+}
+
 .jumbotron { 
 	padding: 80px 0 80px 0;
     background-color: #19b019; /* istSOS green */
@@ -10,6 +14,20 @@ html, body {
 }
 
 /* NAVIGATION BAR */
+.bg-primary {
+    background-color: #19b019 !important;
+    border-radius: 5px !important;
+    padding: 5px 10px 5px 10px;
+}
+
+.list-group-item {
+    text-align: center !important;
+}
+
+.list-group-item>div {
+    text-align: left !important;
+}
+
 .navbar {
     margin-bottom: 0;
     background-color: #fff;
@@ -53,17 +71,52 @@ html, body {
     height: 100%;
     margin-bottom: 10px;
 }
-
 /* ABOUT ISTSOS CORE */
 
-#core {
+#core, #creator, #status, #reports, #links {
+    background-color: #ddffdd;
 	color: #005600;
+    padding-bottom: 10px;
 }
 
-.core-p {
+.core-p, .creator-p {
 	line-height: 25px;
 	font-size: 12pt;
 	font-weight: normal;
 	font-style: italic;
+}
+
+.status-p {
+    line-height: 25px;
+    font-size: 14pt;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.status-text-p {
+    line-height: 25px;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.report-text {
+    background-color: #ddffdd !important;
+    border-radius: 5px !important;
+    color: #005600 !important;
+    padding: 10px;
+}
+
+table {
+    background-color: white;
+}
+
+.link-group {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#contact tr td {
+    width: 1%;
 }
 

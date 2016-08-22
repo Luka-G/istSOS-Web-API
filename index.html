@@ -14,7 +14,7 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tools">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -27,7 +27,7 @@
 						<li><a href="#creator">WIDGET TOOLS</a></li>
 						<li><a href="#status">STATUS</a></li>
 						<li><a href="#reports">REPORTS</a></li>
-						<li><a href="#links">LINKS</a></li>
+						<li><a href="#links">LINKS & CONTACT</a></li>
 					</ul>
 				</div>
 			</div>
@@ -39,29 +39,34 @@
 		<div id="core" class="container-fluid">
 			<div class="row">
 				<div class="col-sm-5">
-					<h2><strong>IstSOS Core JavaScript Library</strong></h2>
+					<h1><strong class="bg-primary">IstSOS Core JavaScript Library</strong></h1>
 					<h3>Exposes communication with the IstSOS WA REST interface</h4>
 					<p class="core-p">IstSOS core JavaScript library was developed using pure JavaScript and Google Closure library, which was particulary used for event handling customization and asynchronous HTTP requests management. IstSOS core JavaScript library covers most of the IstSOS WA REST HTTP requests, which means that developers can easily get the observation data from IstSOS and publish it to their own Web site/page. Using this library, developers can go even further into development and implement IstSOS admin functionalities, like service registering, sensor registering, creating new offerings, adding new units of measures etc...</p>
 					<br/>
 					<table class="table table-bordered">
 						<tr>
+							<td><p class="core-p">GitHub repository</p></td>
+							<td><a href="https://github.com/istSOS/javascript-core" target="_blank"><strong>https://github.com/istSOS/javascript-core</strong></td>
+						</tr>
+						<tr>
 							<td><p class="core-p">Usage instructions</p></td>
-							<td><a href="https://github.com/WebPractice-LukaG/javascript-core#usage-instructions" target="_blank"><strong>https://github.com/WebPractice-LukaG/javascript-core#usage-instructions</strong></td>
+							<td><a href="https://github.com/istSOS/javascript-core#usage-instructions" target="_blank"><strong>https://github.com/istSOS/javascript-core#usage-instructions</strong></td>
 						</tr>
 						<tr>
 							<td><p class="core-p">Commit list</p></td>
-							<td><a href="https://github.com/WebPractice-LukaG/javascript-core/commits/master" target="_blank">https://github.com/WebPractice-LukaG/javascript-core/commits/master</a></td>
+							<td><a href="https://github.com/istSOS/javascript-core/commits/master" target="_blank">https://github.com/istSOS/javascript-core/commits/master</a></td>
 						</tr>
 						<tr>
 							<td><p class="core-p">API Reference</p></td>
-							<td><a href="https://github.com/WebPractice-LukaG/javascript-core/wiki/API-Reference" target="_blank">https://github.com/WebPractice-LukaG/javascript-core/wiki/API-Reference</a></td>
+							<td><a href="https://github.com/istSOS/javascript-core/wiki/API-Reference" target="_blank">https://github.com/istSOS/javascript-core/wiki/API-Reference</a></td>
 						</tr>
 					</table>
+					<p class="core-p">***Note: If, for some reason, there is no code at the links above, check the "Links" section for a forked repository. It's most likely in the process of moving the code to the main repository</p>
 					<p class="core-p">Click on the button below to check out the library test page...</p>
 					<a href="pages/core-test/istsos-test.html" target="_blank" class="btn btn-default btn-lg"><b>JS Core Test</b></a>
 				</div>
 				<div class="col-sm-7 text-center">
-					<h2><strong>How it works</strong></h2>
+					<h2>How it works</h2>
 					<div class="container-fluid text-center bg-grey">
 						<div class="row text-center">
 							<div class="col-sm-4">
@@ -86,5 +91,543 @@
 					</div>
 				</div>
 			</div>
-		</body>
-	</html>
+		</div>
+		<hr/>
+		<!-- WEB WIDGET CREATOR SECTION -->
+		<div id="creator" class="container-fluid">
+			<div class="row">
+				<div class="col-sm-7 text-center">
+					<h2>How it works</h2>
+					<div class="container-fluid text-center bg-grey">
+						<div class="row text-center">
+							<div class="col-sm-4">
+								<div class="thumbnail  creator-tools">
+									<a href="src/img/widget-structure.png" target="_blank"><img class="img-thumbnail" src="src/img/widget-structure.png" alt="Class structure - istsos-widget"></a>
+									<p><strong>Class Structure</strong></p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="thumbnail  creator-tools">
+									<a href="src/img/widget-flow-chart.png" target="_blank"><img class="img-thumbnail" src="src/img/widget-flow-chart.png" alt="Flow chart"></a>
+									<p><strong>Flow chart</strong></p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="thumbnail  creator-tools">
+									<a href="src/img/example-widgets.png" target="_blank"><img class="img-thumbnail" src="src/img/example-widgets.png" alt="Example response"></a>
+									<p><strong>Example widgets</strong></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-5">
+					<h1><strong class="bg-primary">IstSOS Web Widget Creator</strong></h1>
+					<h3>Introduces tools for generating feature-rich widgets based on sensor observation data from IstSOS</h4>
+					<p class="creator-p">IstSOS Web widget creator is an application, that was build using the IstSOS core JavaScript library and IstSOS widget library (particularly designed for widget creation). Tools that are offered to end-users/developers:</p>
+					<ul class="creator-p">
+						<li><strong>Map tool</strong></li>
+						<li><strong>Box tool</strong></li>
+						<li><strong>Chart tool</strong> (Implementation of VistSOS - IstSOS data visualization framework project. See <a href="https://felipe07.github.io/VistSOS-1/" target="_blank">here</a>...)</li>
+					</ul>
+					<br/>
+					<table class="table table-bordered">
+						<tr>
+							<td><p class="core-p">GitHub repository</p></td>
+							<td><a href="https://github.com/istSOS/web-widget-creator" target="_blank"><strong>https://github.com/istSOS/web-widget-creator</strong></td>
+						</tr>
+						<tr>
+							<td><p class="core-p">Usage instructions</p></td>
+							<td><a href="https://github.com/istSOS/web-widget-creator#usage-instructions" target="_blank"><strong>https://github.com/istSOS/web-widget-creator#usage-instructions</strong></td>
+						</tr>
+						<tr>
+							<td><p class="core-p">Commit list</p></td>
+							<td><a href="https://github.com/istSOS/web-widget-creator/commits/master" target="_blank">https://github.com/istSOS/web-widget-creator/commits/master</a></td>
+						</tr>
+						<tr>
+							<td><p class="core-p">API Reference</p></td>
+							<td><a href="https://github.com/istSOS/web-widget-creator/wiki/API-Reference" target="_blank">https://github.com/istSOS/web-widget-creator/wiki/API-Reference</a></td>
+						</tr>
+					</table>
+					<p class="core-p">***Note: If, for some reason, there is no code at the links above, check the "Links" section for a forked repository. It's most likely in the process of moving the code to the main repository</p>
+					<p class="creator-p">Click on the button below to check out the Web widget creator test page...</p>
+					<a href="pages/core-test/istsos-test.html" target="_blank" class="btn btn-default btn-lg"><b>Widget creator test</b></a>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<div id="status" class="container-fluid">
+			<h1 class="bg-primary text-center"><strong>Status</strong></h1>
+			<p class="status-p">
+				IstSOS Web API framework is considered operational from now on, but users/developers should know that, there are some disadvantages that will be worked on in the near future. On the left side below, there is an addition to the <a href="https://github.com/istSOS/web-widget-creator#usage-instructions">Web widget creator usage instructions</a>, which represents restrictive set of rules, when it comes to the usage of more than one widget. On the right side below, there is a list of features that will be fixed, updated, implemented or reimplemented. Some of them are the main reason of the disadvantages, listed on the left side.
+			</p>
+			<div class="row">
+				<div class="col-sm-6">
+					<table class="table table-bordered">
+						<thead>
+						<tr><i>List of disadvantages:</i></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<p class="status-text-p">
+									If you decide to use <strong>AUTO-UPDATE</strong> option on <strong>MORE THAN ONE</strong> widget, make sure that you avoid updating them at the same time. (e.g. <i>set different startup delay, and the same update interval...</i>)
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="status-text-p">
+									There is no AUTO-UPDATE option for chart widgets, because charts require time interval specified in advance. So avoid using more than one chart widget at the same page. If you really must use it, use JavaScript <code>setTimeout()</code> method as a workaround to avoid using them at the same time.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="status-text-p">
+									If you are using map widget or box widget or both, together with the chart widget, keep in mind that chart widget has no startup delay and will update itself at once. So, you should make sure, that map widget and box widget have different startup delay than the chart widget, an also different startup delay between each other.
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-sm-6">
+				<table class="table table-bordered">
+					<thead>
+					<tr><i>Features to be implemented/fixed:</i></tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<p class="status-text-p">
+								<strong>EVENT HANDLING</strong>
+							</p>
+						</td>
+						<td>
+							<p class="status-text-p">
+								Custom event handling of the istSOS Javascript core library is the main reason of the listed disadvantages. Finding solution for this problem, will be the main goal in the near future.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="status-text-p">
+								<strong>INSERT OBSERVATIONS</strong>
+							</p>
+						</td>
+						<td>
+							<p class="status-text-p">
+								IstSOS Javascript core library doesn't include a method for inserting the observation data.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="status-text-p">
+								<strong>WEB WIDGET CREATOR DESIGN</strong>
+							</p>
+						</td>
+						<td>
+							<p class="status-text-p">
+								During the GSoC, instructions were to focus on functionality, rather than on design. So, Web page containing istSOS Web widget creator application has some design responsivity issues, unorganized HTML usage etc...
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="status-text-p">
+								<strong>BOX WIDGET</strong>
+							</p>
+						</td>
+						<td>
+							<p class="status-text-p">
+								Right now, Box widget requires Bootstrap for it's design. Plan is to avoid that and use pure CSS.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="status-text-p">
+								<strong>MAP WIDGET</strong>
+							</p>
+						</td>
+						<td>
+							<p class="status-text-p">
+								Map widget uses OpenLayers 3 for map building. But, when the embedded code is used, map controls like ZoomIn, ZoomOut and other, become invisible, because there is no OL3 css in that code.
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div id="reports" class="container-fluid">
+	<h1 class="text-center bg-primary"><strong>Weekly Reports</strong></h1>
+	<h4><i>Weekly reports displayed below, describe the development process from the very beginning. Last report represents summary of the whole project. Click on report to display it's content...</i></h4>
+	<div class="row">
+		<div class="col-sm-4">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<a href="#1" data-toggle="collapse">Week 1</a>
+					<div id="1" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								This week, I’ve been indentifying all the admin HTTP requests to the server, that are targeting the istSOS RESTful API. By identifying, I mean writting down:
+							</p>
+							<ul>
+								<li>URL</li>
+								<li>type of request (GET, POST, PUT, DELETE)</li>
+								<li>response data</li>
+								<li>request payload</li>
+							</ul>
+							<p>
+								Also, I’ve started designing the class structure, for the purpose of developing JavaScript core library.
+								All of the mentioned work, I’m doing in partnership with a GsoC student Florin-Daniel Cioloboc, who’s working on an Java core library for istSOS and our work overlaps in this section.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								Next week, I will be finishing the class structure and begin with the actual development/coding of JavaScript core library. I will be also creating some test pages along the way, to check for possible errors.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is going according to plan.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#2" data-toggle="collapse">Week 2</a>
+					<div id="2" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								This week, I've been continuosly working on class structure design for JavaScript core library and also started commiting some code. The was to implement IstSOS, Server and Database classes, but let's say that 90% of it is done.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								Next week, I will be completing the class structure and will try to implement more classes like Service, Offering, Procedure.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Actually, the reason why 90% of mentioned classes were done, is that I was unable to store JSON response object into an outside variable. For the information, I've been using Google Closure library for executing AJAX requests.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#3" data-toggle="collapse">Week 3</a>
+					<div id="3" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								This week, I’ve implemented Configuration, Service, Offering, ObservedProperty, DataQuality, UnitOfMeasure and Date classes. Service class is partially implemented, because it depends on other classes that should be implemented soon. Also, I’ve created an html and JavaScript file for testing and I’ve already tested some of the previously implemented classes, but the new ones are about to be tested.<br/>
+								Appart from mentioned, I’ve updated OSgeo wiki page with timeline and weekly reports, also you can take a look at README file in my GitHub forked repository, because I’ve started with creating API documentation for the core library I’ve been working on.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								Next week, I plan to implement last two classes (Procedure, VirtualProcedure) and to do all the testing, bug fixes and refining the code and documentation. Hopefully, by June 20-th, I will be releasing istSOS JavaScript core library.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is fine. I solved the issue with AJAX requests in consultance with my mentors.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#4" data-toggle="collapse">Week 4</a>
+					<div id="4" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								I have implemented all the classes and did the testing of all the GET requests, which can be checked if you take a look at istsos-test.html and istsos-test.js.<br/>
+								I have also updated the GitHub wiki page with the API documentation and the class structure of the library.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								I plan to test all requests (POST/PUT/DELETE). Hopefully, this part will go easier and quicker, because I already fixed most of the minor problems during GET request tests.<br/>
+								Also, I will be updating documentation along the way.<br/>
+								We have regular meetengs with our mentors every Tuesday, so If everything goes as planned, I will prepare the first version of a library until then.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is going according to plan.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<a href="#5" data-toggle="collapse">Week 5</a>
+					<div id="5" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								It's a midterm evaluation period and I did a lot of testing of the library, there is a test html and test js on my GitHub forked repository. Also, I've been updating the API documentation and Class structure on the GitHub wiki page.<br/>
+								Next part of my job is to develop JavaScript Framework based on previously developed library, so I started thinking about how it should be implemented, how should interface look like etc.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								I plan to finish the documentation in the next few days, do some more testing of a library and generate a compiled version of a library, so other people can use it easily.
+								Also, I will work on conceptual design of JavaScript Framework, I will be working together with GSoC student Felipe Poveda, because I need to integrate his implementation into my project and he needs to use my library for his own project.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is fine.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#6" data-toggle="collapse">Week 6</a>
+					<div id="6" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								I've been working on a design of the JavaScript Framework. No coding this week, more thinking and drawing on a piece of paper. Also, I started writing into a sreadsheet, every functionallity that should be implemented with description, so I can better organize my self, when the coding starts
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								I plan to finish conceptual design and start implementing/coding the features. Of course, updates&fixes of the previously developed library along the way, is inevitable.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is fine.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#7" data-toggle="collapse">Week 7</a>
+					<div id="7" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								I've been designing home page, with some of the tools (without functionality, just visual aspect) . Usage of Bootstrap helped with the page repsonsivness. Code can be checked and tested <a href="https://github.com/WebPractice-LukaG/web-widget-creator" target="_blank">here</a>.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								Next week, I plan to finish with design and implement a lot of tools, like Map creator tools, Admin tools for creating, updating and deleting data etc. I will be thinking and adding some new tools allong the way. Of course, fixing of design errors may be necessary, depending on the feature requirements.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is fine.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#8" data-toggle="collapse">Week 8</a>
+					<div id="8" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								This week, in consultance with my mentors, I've reduced number of tools that I've had planned to implement, because they seem irrelevant. Also, I changed approach a little bit, so I needed to start over with implementation. New plan is to develop small library for creating widgets. So far, I have implemented istsos.widget.Widget base class and partially istsos.widget.Map class. Code can be checked <a href="https://github.com/WebPractice-LukaG/web-widget-creator" target="_blank">here</a>.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								Next week, I plan to improve Widget base class and finish the Map class implementation. Also, I will start with developing Box class and working on a way to integrate this project as a Chart class.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is fine.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<a href="#9" data-toggle="collapse">Week 9</a>
+					<div id="9" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								This week, I finished with the implementation of Map creator tool. Of course, further improvements will be made along the way, but the main functionality is covered and tested. I also started with the implementation of a Box creator tool. Also I've been updating and fixing the istsos core library with some changes regarding the getObservations method and compatibility issues with Internet Explorer 11. All variations of getObservations method can now pass multiple procedures as parameter. Code can be checked at following links:
+								<ul>
+									<li><a href="https://github.com/WebPractice-LukaG/javascript-core" target="_blank">istSOS core - GitHub repository</a></li>
+									<li><a href="https://github.com/WebPractice-LukaG/web-widget-creator" target="_blank">istSOS Web Widget Creator - GitHub repository</a></li>
+								</ul>
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								Next week, I plan to improve Map creator tool with some styling settings and to  finish the Box creator tool. Also, I will be taking a closer look at <a href="https://github.com/felipe07/VistSOS-1" target="_blank">VistSOS data visualization framework</a> project and hopefully start integrating it as a Chart creator tool. Also, I'm kinda slow with the documentation updates, so I will be focusing on that also starting tomorrow.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is fine.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#10" data-toggle="collapse">Week 10</a>
+					<div id="10" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								This week, I almost finished the implementation of Box widget creator tool. Generated box widget rellies on Bootstrap and this is not good, because it forces the user to import Bootsrap to his Web page, so, design part needs to be rearranged. Functionality is fully implemented, except the "decision making", when it comes to choosing the right icon to represent selected observed properties.  This will be solved in consultance with the mentors.<br/>
+								I also spent a lot of time, familiarizing with the VistSOS data visualization framework and I'm still working on a plan how to integrate it into my project. So far, I thought of general concept of how the user input form is going to look like, how am I going to connect it to the istsos.widget.Chart class and what parts of VistSOS project I'm going to use.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								Next week, I plan to finish the Map creator tool (minor changes related to displaying of a time format, will be introduced), Box creator tool with pure CSS styling and I plan to have first version of Chart creator tool. In order to implement Chart creator tool, I still need to explore the capabilities of VistSOS in consultance with the student, who's working on that project. Hopefully in the period from August 7th to August 14th, I will be having first version of istSOS Web API and will be dealing with fixing the minor issues, completing the documentation etc.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Currently, everything is fine.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#11" data-toggle="collapse">Week 11</a>
+					<div id="11" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">What did you get done this week?</h4>
+							<p>
+								This week, I implemented the form for generating chart widgets, there is still  "build" method left to implement, but that will be quick, because whole logic is about dynamically creating the <code>&#60;istsos-chart&#62;</code> element. This implementation rellies on Vistsos - Data visualization framework and I prepared it for possible updates. If any change comes up, the only thing that needs to be updated is chart-types specification file and application does all the rest.
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">What do you plan on doing next week?</h4>
+							<p>
+								Next week, I plan to refine the code,put some comments  and update the documentation. Also there are some issues with the event handling, which I'm going to solve in consultance with the mentors
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Are you blocked on anything?</h4>
+							<p>Other than mentioned above, everything is fine.</p>
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#12" data-toggle="collapse">Week 12</a>
+					<div id="12" class="collapse">
+						<div class="report-text">
+							<h4 class="bg-primary">The state of the project as it was before your GSoC?</h4>
+							<p>
+								Before my GSoC, IstSOS data couldn't be published on the Web, without hard coding from scratch. Developers would have had to learn about WA REST interface, to implement those requests in order to get the data, to define how they want to publish that data, etc...
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">The addition that your project brought to the software?</h4>
+							<p>
+								With istSOS Web API, developers can use powerfull istSOS core JavaScript library that covers most of the WA REST HTTP requests. Also, developers now have istSOS Web widget creator , at their disposal. This is an application that uses istSOS core Javascript library and offers the set of widget creator tools:
+								<ul>
+									<li> Map - developers can easily build map widgets, that show sensor locations, last observation and date&time of the last observation for each sensor</li>
+									<li>Box - developers can easily build boxes, that contain sensor name, date&time of the last observation, and last observation values for each observed property related to selected sensor</li>
+									<li>Chart - integrated framework from the project - VistSOS - Data visualization framework. Developers can easily configure and build several types of interactive charts, that represent observation data in selected time span.</li>
+								</ul>
+							</p>
+						</div>
+						<div class="report-text">
+							<h4 class="bg-primary">Links:</h4>
+							<p>
+								<ul>
+									JavaScript Core - usage instructions:<br/>
+									<li><a href="https://github.com/WebPractice-LukaG/javascript-core#usage-instructions" target="_blank">https://github.com/WebPractice-LukaG/javascript-core#usage-instructions</a></li>
+									Web widget creator - usage instructions:<br/>
+									<li><a href="https://github.com/WebPractice-LukaG/web-widget-creator#usage-instructions" target="_blank">https://github.com/WebPractice-LukaG/web-widget-creator#usage-instructions</a></li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<hr/>
+<div id="links" class="container-fluid">
+	<h1 class="bg-primary text-center"><strong>Links and contact information</strong></h1>
+	<div class="row">
+		<div class="col-sm-6">
+			<h3 class="text-center"><strong>Important links</strong></h3>
+			<br/>
+			<h4><strong>Main repositories:</strong></h4>
+			<div class="link-group">
+				<a href="https://github.com/istSOS/javascript-core" target="_blank">IstSOS JavaScript core library - https://github.com/istSOS/javascript-core</a><br/>
+				<a href="https://github.com/istSOS/javascript-core/commits/master" target="_blank">IstSOS JavaScript core library commit list - https://github.com/istSOS/javascript-core/commits/master</a><br/>
+				<a href="https://github.com/istSOS/web-widget-creator" target="_blank">istSOS Web widget creator - https://github.com/istSOS/web-widget-creator</a><br/>
+				<a href="https://github.com/istSOS/web-widget-creator/commits/master" target="_blank">istSOS Web widget creator commit list - https://github.com/istSOS/web-widget-creator/commits/master</a>
+			</div>
+			<br/><br/>
+			<h4><strong>Forked repositories:</strong></h4>
+			<div class="link-group">
+				<a href="https://github.com/WebPractice-LukaG/javascript-core" target="_blank">IstSOS JavaScript core library - https://github.com/WebPractice-LukaG/javascript-core</a><br/>
+				<a href="https://github.com/WebPractice-LukaG/javascript-core/commits/master" target="_blank">IstSOS JavaScript core library commit list - https://github.com/WebPractice-LukaG/javascript-core/commits/master</a><br/>
+				<a href="https://github.com/WebPractice-LukaG/web-widget-creator" target="_blank">istSOS Web widget creator - https://github.com/WebPractice-LukaG/web-widget-creator</a><br/>
+				<a href="https://github.com/WebPractice-LukaG/web-widget-creator/commits/master" target="_blank">istSOS Web widget creator commit list - https://github.com/WebPractice-LukaG/web-widget-creator/commits/master</a>
+			</div>
+			<br/><br/>
+			<h4><strong>Project Wiki page:</strong></h4>
+			<div class="link-group">
+				<a href="https://wiki.osgeo.org/wiki/IstSOS_Web_API" target="_blank">IstSOS Web API - https://wiki.osgeo.org/wiki/IstSOS_Web_API</a>
+			</div>
+			<br/><br/>
+			<h4><strong>IstSOS Home:</strong></h4>
+			<div class="link-group">
+				<a href="http://istsos.org/" target="_blank">IstSOS Home page - http://istsos.org/</a>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<h3 class="text-center"><strong>Contact information</strong></h3>
+			<br/>
+			<br/>
+			<br/>
+			<table id="contact" class="bg-primary table table-bordered">
+				<tr>
+					<td class="text-center">NAME:</td>
+					<td class="text-left" style="font-size: 14pt; color: #005600; background-color: white !important">Luka</td>
+				</tr>
+				<tr>
+					<td class="text-center">LAST NAME:</td>
+					<td class="text-left" style="font-size: 14pt; color: #005600; background-color: white !important">Glušica</td>
+				</tr>
+				<tr>
+					<td class="text-center">EDUCATION:</td>
+					<td class="text-left" style="font-size: 14pt; color: #005600; background-color: white !important">BSc in Geodesy and Geoinformatics at the Faculty of Civil Engineering, University of Belgrade, Serbia(pursuing MSc degree in Geoinformatics)</td>
+				</tr>
+				<tr>
+					<td class="text-center">E-MAIL:</td>
+					<td class="text-left" style="font-size: 14pt; background-color: white !important"><a><i>luka.glusica89@gmail.com</i></a></td>
+				</tr>
+				<tr>
+					<td class="text-center">LINKEDIN:</td>
+					<td class="text-left" style="font-size: 14pt; background-color: white !important"><a href="https://www.linkedin.com/in/luka-glu%C5%A1ica-616464a7?trk=nav_responsive_tab_profile" target="_blank"><i>https://www.linkedin.com/in/luka-glu%C5%A1ica-616464a7?trk=nav_responsive_tab_profile</i></a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>
