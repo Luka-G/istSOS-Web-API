@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+        
+        <script src="bower_components/jQuery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/moment/min/moment.min.js"></script>
+        <script src="js/istsos-widget.js"></script>
+        <script src="js/mapForm.js"></script>
+        <script src="js/contentManagement.js"></script>
+        
+        <title>istSOS Widget Creator</title>
+        <script></script>
+    </head>
+    <body>
+        <div class="container-fluid text-center">
+        <div class="jumbotron">
+            <h2>ISTSOS WEB WIDGET CREATOR TESTING PAGE</h2>
+            <h4>Map tool creator with data from IstSOS public server is used for this showcase.</h4>
+            <h5><i>Note: Because data is collected from external source (istSOS public server), browser might mark the scripts as unsafe and block them, so if you want to use test this tool, you must allow it in the browser settings.</i></h5>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="map_tool_container">
+                    <div class="form-group">
+                        <label for="service_list_map">SERVICE:</label>
+                        <select class="form-control" id="service_list_map">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="offering_list_map">OFFERING:</label>
+                        <select class="form-control" id="offering_list_map">
+                            <option>-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="procedure_list_map">PROCEDURE:</label>
+                        <form role="form" id="procedure_list_map" class="text-left">
+                            <hr/>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <label for="op_list_map">OBSERVED PROPERTY:</label>
+                        <select class="form-control" id="op_list_map">
+                            <option>-</option>
+                        </select>
+                    </div>
+                    <hr/>
+                </div>
+                <div id=common_settings>
+                    <label>WIDGET SETTINGS</label>
+                    <br/>
+                    <br/>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="elementId">ID:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control common-item" id="elementId"
+                                placeholder="Enter element ID"
+                                required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="css_class">CLASS:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control common-item" id="css_class"
+                                placeholder="Enter CSS class">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="height">HEIGHT:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control common-item" id="height" placeholder="Enter widget height">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="width">WIDTH:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control common-item" id="width" placeholder="Enter widget width">
+                            </div>
+                        </div>
+                        <div class="widget-layout text-center">
+                            <hr/>
+                            <label>WIDGET LAYOUT</label>
+                            <br/>
+                            <form role="form">
+                                <label id="horizontal" class="radio-inline"><input id="radHor" type="radio" name="layout" checked> HORIZONTAL</label>
+                                <label id="vertical" class="radio-inline"><input id="radVert" type="radio" name="layout"> VERTICAL</label>
+                            </form>
+                        </div>
+                        <br/>
+                        <div id="update-container">
+                            <form role="form">
+                                <label id="auto-update-label" class="checkbox-inline"><input id="auto-update" type="checkbox"> AUTO-UPDATE</label>
+                            </form>
+                            <div class="form-group auto-update-interval" hidden>
+                                <br/>
+                                <label class="control-label col-sm-6" for="timeUnit">TIME UNIT:</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control" id="timeUnit">
+                                        <option selected>sec</option>
+                                        <option>min</option>
+                                        <option>hr</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <br/>
+                            <br/>
+                            <div class="form-group auto-update-interval" hidden>
+                                <label class="control-label col-sm-6" for="delay">START DELAY:</label>
+                                <div class="col-sm-6">
+                                    <input type="number" class="form-control" id="delay">
+                                </div>
+                                <br/>
+                                <br/>
+                            </div>
+                            <div class="form-group auto-update-interval" hidden>
+                                <label class="control-label col-sm-6" for="update-interval">INTERVAL:</label>
+                                <div class="col-sm-6">
+                                    <input type="number" class="form-control" id="update-interval">
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <hr/>
+                        </div>
+                    </form>
+                    <br/>
+                </div>
+                <div id="map_button" class="form-group buttons">
+                    <div class="col-sm-offset-3">
+                        <button id="generate_map" type="button" class="btn btn-default">Generate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+            <label for="code_output">Preview:</label>
+                <div id="preview" class="preview" style="border: 1px solid lightgrey; border-radius: 10px; min-height: 50px;"></div>
+                <br/>
+                <div id="code">
+                    <div class="form-group">
+                        <label for="code_output">Embedded code:</label>
+                        <textarea class="form-control" rows="6" id="code_output"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

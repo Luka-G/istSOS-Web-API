@@ -1,0 +1,22 @@
+{
+  "name": "web-widget-creator-bower",
+  "authors": [
+    "Luka Glusica <luka.glusica89@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.14.1",
+    "bootstrap": "^3.3.7",
+    "jQuery": "2.2.4",
+  }
+}
