@@ -149,7 +149,7 @@ istsos.on(istsos.events.EventType.GETOBSERVATIONS_BY_QUALITY, function(ev) {
 
 var ist = new istsos.IstSOS();
 var default_db = new istsos.Database('istsos', 'localhost', 'postgres', 'postgres', 5432);
-var server = new istsos.Server('test', 'https://istsos.org/istsos/', default_db);
+var server = new istsos.Server('test', 'https://geoservice.ist.supsi.ch/istsos/', default_db);
 
 ist.addServer(server);
 
