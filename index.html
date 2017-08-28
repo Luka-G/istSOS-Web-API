@@ -35,14 +35,15 @@
 		<div class="jumbotron text-center">
 			<h1>IstSOS Web API</h1>
 			<p>Lightweight Javascript framework for interacting with the sensor observation data managed by IstSOS server implementation</p>
-			<p> This work is part of <i><a href="https://developers.google.com/open-source/gsoc/">Google Summer of Code 2016</a></i> program </p>
+			<p> This work is part of <i><a href="https://developers.google.com/open-source/gsoc/">Google Summer of Code 2016 and 2017</a></i> program </p>
 		</div>
 		<div id="core" class="container-fluid">
 			<div class="row">
 				<div class="col-sm-5">
 					<h1><strong class="bg-primary">IstSOS Core JavaScript Library</strong></h1>
-					<h3>Exposes communication with the IstSOS WA REST interface</h4>
-					<p class="core-p">IstSOS core JavaScript library was developed using pure JavaScript and Google Closure library, which was particulary used for event handling customization and asynchronous HTTP requests management. IstSOS core JavaScript library covers most of the IstSOS WA REST HTTP requests, which means that developers can easily get the observation data from IstSOS and publish it to their own Web site/page. Using this library, developers can go even further into development and implement IstSOS admin functionalities, like service registering, sensor registering, creating new offerings, adding new units of measures etc...</p>
+					<h3>Exposes communication with the IstSOS WA REST interface</h3>
+					<p class="core-p">IstSOS core JavaScript library was developed using pure ES6 syntax, Babel transpiler and Webpack. IstSOS core JavaScript library covers most of the IstSOS WA REST HTTP requests, which means that developers can easily get the observation data from IstSOS and publish it to their own Web site/page. Using this library, developers can go even further into development and implement IstSOS admin functionalities, like service registering, sensor registering, creating new offerings, adding new units of measures etc...</p>
+					
 					<br/>
 					<table class="table table-bordered">
 						<tr>
@@ -59,7 +60,7 @@
 						</tr>
 						<tr>
 							<td><p class="core-p">API Reference</p></td>
-							<td><a href="https://github.com/istSOS/javascript-core/wiki/API-Reference" target="_blank">https://github.com/istSOS/javascript-core/wiki/API-Reference</a></td>
+							<td><a href="https://luka-g.github.io/javascript-core" target="_blank">https://luka-g.github.io/javascript-core</a></td>
 						</tr>
 					</table>
 					<p class="core-p">***Note: If, for some reason, there is no code at the links above or it's not complete, check the "Links" section for a forked repository. It's most likely in the process of moving the code to the main repository</p>
@@ -90,6 +91,15 @@
 							</div>
 						</div>
 					</div>
+					<ul class="list-group">
+						Changes made to the library during Google Summer of Code 2017:<br/>
+						<li class="list-group-item text-left">Removed Closure library</li>
+						<li class="list-group-item text-left">Rewrite using ES6, Babel transpiler and Webpack</li>
+						<li class="list-group-item text-left">Developed simple promisified HTTP API</li>
+						<li class="list-group-item text-left">Solved event handling with istsos.EventEmitter class</li>
+						<li class="list-group-item text-left">Added authentication support</li>
+						<li class="list-group-item text-left">Library published to <a href="https://www.npmjs.com/package/istsos-javascript-core">npm</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -98,29 +108,36 @@
 		<div id="creator" class="container-fluid">
 			<div class="row">
 				<div class="col-sm-7 text-center">
-					<h2>How it works</h2>
+					<h2>Example screenshots</h2>
 					<div class="container-fluid text-center bg-grey">
 						<div class="row text-center">
 							<div class="col-sm-4">
 								<div class="thumbnail  creator-tools">
-									<a href="src/img/widget-structure.png" target="_blank"><img class="img-thumbnail" src="src/img/widget-structure.png" alt="Class structure - istsos-widget"></a>
-									<p><strong>Class Structure</strong></p>
+									<a href="src/img/home.png" target="_blank"><img class="img-thumbnail" src="src/img/home.png" alt="Home page"></a>
+									<p><strong>Home</strong></p>
 								</div>
 							</div>
 							<div class="col-sm-4">
 								<div class="thumbnail  creator-tools">
-									<a href="src/img/widget-flow-chart.png" target="_blank"><img class="img-thumbnail" src="src/img/widget-flow-chart.png" alt="Flow chart"></a>
-									<p><strong>Flow chart</strong></p>
+									<a href="src/img/map.png" target="_blank"><img class="img-thumbnail" src="src/img/map.png" alt="Map tool"></a>
+									<p><strong>Map tool</strong></p>
 								</div>
 							</div>
 							<div class="col-sm-4">
 								<div class="thumbnail  creator-tools">
 									<a href="src/img/example-widgets.png" target="_blank"><img class="img-thumbnail" src="src/img/example-widgets.png" alt="Example response"></a>
-									<p><strong>Example widgets</strong></p>
+									<p><strong>Box tool</strong></p>
 								</div>
 							</div>
 						</div>
 					</div>
+					<ul class="list-group">
+						Changes made to the IstSOS Web Widget Creator during Google Summer of Code 2017:<br/>
+						<li class="list-group-item text-left">Rewrite using React JS library, ES6, Babel transpiler and Webpack</li>
+						<li class="list-group-item text-left">Simplified installation</li>
+						<li class="list-group-item text-left">Simplified configuration</li>
+						<li class="list-group-item text-left">Chart widget tool temporary removed due to difficulties in VistSOS integration</li>
+					</ul>
 				</div>
 				<div class="col-sm-5">
 					<h1><strong class="bg-primary">IstSOS Web Widget Creator</strong></h1>
@@ -129,7 +146,7 @@
 					<ul class="creator-p">
 						<li><strong>Map tool</strong></li>
 						<li><strong>Box tool</strong></li>
-						<li><strong>Chart tool</strong> (Implementation of VistSOS - IstSOS data visualization framework project. See <a href="https://felipe07.github.io/VistSOS-1/" target="_blank">here</a>...)</li>
+						<li><strong style="text-decoration: line-through;">Chart tool</strong> (Implementation of VistSOS - IstSOS data visualization framework project. See <a href="https://felipe07.github.io/VistSOS-1/" target="_blank">here</a>...)</li>
 					</ul>
 					<br/>
 					<table class="table table-bordered">
@@ -145,10 +162,6 @@
 							<td><p class="core-p">Commit list</p></td>
 							<td><a href="https://github.com/istSOS/web-widget-creator/commits/master?author=Luka-G" target="_blank">https://github.com/istSOS/web-widget-creator/commits/master?author=Luka-G</a></td>
 						</tr>
-						<tr>
-							<td><p class="core-p">API Reference</p></td>
-							<td><a href="https://github.com/istSOS/web-widget-creator/wiki/API-Reference" target="_blank">https://github.com/istSOS/web-widget-creator/wiki/API-Reference</a></td>
-						</tr>
 					</table>
 					<p class="core-p">***Note: If, for some reason, there is no code at the links above or it's not complete, check the "Links" section for a forked repository. It's most likely in the process of moving the code to the main repository</p>
 					<p class="creator-p">Click on the button below to check out the Web widget creator test page...</p>
@@ -160,40 +173,10 @@
 		<div id="status" class="container-fluid">
 			<h1 class="bg-primary text-center"><strong>Status</strong></h1>
 			<p class="status-p">
-				IstSOS Web API framework is considered operational from now on, but users/developers should know that, there are some disadvantages that will be worked on in the near future. On the left side below, there is an addition to the <a href="https://github.com/istSOS/web-widget-creator#usage-instructions">Web widget creator usage instructions</a>, which represents restrictive set of rules, when it comes to the usage of more than one widget. On the right side below, there is a list of features that will be fixed, updated, implemented or reimplemented. Some of them are the main reason of the disadvantages, listed on the left side.
+				IstSOS Web API framework is considered operational from now on, but users/developers should know that, there are some disadvantages that will be worked on in the near future. On the table below, there is a list of features that will be fixed, updated, implemented or reimplemented.
 			</p>
 			<div class="row">
-				<div class="col-sm-6">
-					<table class="table table-bordered">
-						<thead>
-						<tr><i>List of disadvantages:</i></tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<p class="status-text-p">
-									If you decide to use <strong>AUTO-UPDATE</strong> option on <strong>MORE THAN ONE</strong> widget, make sure that you avoid updating them at the same time. (e.g. <i>set different startup delay, and the same update interval...</i>)
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p class="status-text-p">
-									There is no AUTO-UPDATE option for chart widgets, because charts require time interval specified in advance. So avoid using more than one chart widget at the same page. If you really must use it, use JavaScript <code>setTimeout()</code> method as a workaround to avoid using them at the same time.
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p class="status-text-p">
-									If you are using map widget or box widget or both, together with the chart widget, keep in mind that chart widget has no startup delay and will update itself at once. So, you should make sure, that map widget and box widget have different startup delay than the chart widget, an also different startup delay between each other.
-								</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-12">
 				<table class="table table-bordered">
 					<thead>
 					<tr><i>Features to be implemented/fixed:</i></tr>
@@ -202,60 +185,24 @@
 					<tr>
 						<td>
 							<p class="status-text-p">
-								<strong>EVENT HANDLING</strong>
+								<strong>CHART WIDGET TOOL</strong>
 							</p>
 						</td>
 						<td>
 							<p class="status-text-p">
-								Custom event handling of the istSOS Javascript core library is the main reason of the listed disadvantages. Finding solution for this problem, will be the main goal in the near future.
-							</p>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="status-text-p">
-								<strong>INSERT OBSERVATIONS</strong>
-							</p>
-						</td>
-						<td>
-							<p class="status-text-p">
-								IstSOS Javascript core library doesn't include a method for inserting the observation data.
+								Chart widget tool depends on VistSOS project. For some reason, it's not working as expected, so fixing that will be the goal in the next build.
 							</p>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<p class="status-text-p">
-								<strong>WEB WIDGET CREATOR DESIGN</strong>
+								<strong>CONFIGURATION TOOL</strong>
 							</p>
 						</td>
 						<td>
 							<p class="status-text-p">
-								During the GSoC, instructions were to focus on functionality, rather than on design. So, Web page containing istSOS Web widget creator application has some design responsivity issues, unorganized HTML usage etc...
-							</p>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="status-text-p">
-								<strong>BOX WIDGET</strong>
-							</p>
-						</td>
-						<td>
-							<p class="status-text-p">
-								Right now, Box widget requires Bootstrap for it's design. Plan is to avoid that and use pure CSS.
-							</p>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="status-text-p">
-								<strong>MAP WIDGET</strong>
-							</p>
-						</td>
-						<td>
-							<p class="status-text-p">
-								Map widget uses OpenLayers 3 for map building. But, when the embedded code is used, map controls like ZoomIn, ZoomOut and other, become invisible, because there is no OL3 css in that code.
+								Idea is to imlement configuration tool that will help with creation of the json specification object. It would be a simple form with json config output.
 							</p>
 						</td>
 					</tr>
