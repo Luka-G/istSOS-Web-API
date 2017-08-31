@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/Luka-G/istSOS-Web-API#readme",
   "dependencies": {
-    "istsos-javascript-core": "^1.0.0"
+    "istsos-javascript-core": "^1.0.1"
   }
 }
