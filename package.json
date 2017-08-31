@@ -1,0 +1,25 @@
+{
+  "name": "istsos-web-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luka-G/istSOS-Web-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luka-G/istSOS-Web-API/issues"
+  },
+  "homepage": "https://github.com/Luka-G/istSOS-Web-API#readme",
+  "dependencies": {
+    "istsos-javascript-core": "^1.0.0"
+  }
+}
