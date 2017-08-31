@@ -442,9 +442,6 @@ function getGEOJSON() {
          console.log(result)
          log(result, 'GEOJSON')
       })
-      .catch(function(error) {
-         console.log(error)
-      })
       //service.getFeatureCollection(3857, null, v_procedure)
       //service.getFeatureCollection(3857, offering, procedure)
       //service.getFeatureCollection(3857, offering, v_procedure)
