@@ -440,7 +440,7 @@ function getGEOJSON() {
    service.getFeatureCollection({opt_epsg: 3857})
       .then(function(result) {
          console.log(result)
-         log(result.data, 'GEOJSON')
+         log(result, 'GEOJSON')
       })
       .catch(function(error) {
          console.log(error)
